@@ -5,11 +5,101 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dashboard</title>
+  <link rel="stylesheet" href="styles/main.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
   <div class="dashboard-container">
+    <aside class="sidebar">
+      <div class="logo">🏠</div>
+      <nav class="nav-menu">
+        <ul>
+          <li class="active">Dashboard</li>
+          <li>Schedule</li>
+          <li>Message</li>
+          <li>Analytics</li>
+          <li>Team</li>
+        </ul>
+        <ul class="nav-settings">
+          <li>Profile</li>
+          <li>Settings</li>
+          <li>Help</li>
+          <li>Logout</li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <input type="text" placeholder="Search here ..." class="search-box" />
+        <div class="topbar-icons">
+          <div class="icon">🔔</div>
+          <div class="icon">💬</div>
+          <div class="profile">Mrie Kritani</div>
+        </div>
+      </header>
+
+      <section class="overview">
+        <div class="card balance">
+          <h4>Your Balance</h4>
+          <p class="amount">$28,891.138</p>
+        </div>
+        <div class="card saving">
+          <h4>Saving</h4>
+          <p class="amount">$1,050.44</p>
+        </div>
+        <div class="card expenses">
+          <h4>Expenses</h4>
+          <p class="amount">$200.31</p>
+        </div>
+        <div class="card incomes">
+          <h4>Incomes</h4>
+          <p class="amount">$21,121.0</p>
+        </div>
+      </section>
+
+      <section class="analytics">
+        <h3>Analytics</h3>
+        <canvas id="analyticsChart"></canvas>
+      </section>
+    </main>
+
+    <aside class="rightbar">
+      <section class="saving-plan">
+        <h4>Saving Plan <a href="#">See All</a></h4>
+        <ul>
+          <li>
+            <p>Bali Vacation <span>$1950.21</span></p>
+            <div class="progress yellow" style="width: 48%"></div>
+          </li>
+          <li>
+            <p>New Gadget <span>$790.21</span></p>
+            <div class="progress orange" style="width: 79%"></div>
+          </li>
+          <li>
+            <p>Charity <span>$32.11</span></p>
+            <div class="progress green" style="width: 32%"></div>
+          </li>
+        </ul>
+      </section>
+
+      <section class="transactions">
+        <h4>Recent Transactions <a href="#">See All</a></h4>
+        <ul>
+          <li><span>Figma</span><span>$100</span><span class="completed">Completed</span></li>
+          <li><span>Youtube</span><span>$120</span><span class="completed">Completed</span></li>
+          <li><span>Spotify</span><span>$15</span><span class="completed">Completed</span></li>
+          <li><span>Freepik</span><span>$3000</span><span class="completed">Completed</span></li>
+        </ul>
+      </section>
+    </aside>
   </div>
+
+
+  <script src="scripts/main.js"></script>
 </body>
 
 </html>
+
