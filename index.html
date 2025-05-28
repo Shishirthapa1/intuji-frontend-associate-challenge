@@ -1,105 +1,352 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dashboard</title>
-  <link rel="stylesheet" href="styles/main.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-</head>
-
-<body>
-  <div class="dashboard-container">
-    <aside class="sidebar">
-      <div class="logo">🏠</div>
-      <nav class="nav-menu">
-        <ul>
-          <li class="active">Dashboard</li>
-          <li>Schedule</li>
-          <li>Message</li>
-          <li>Analytics</li>
-          <li>Team</li>
-        </ul>
-        <ul class="nav-settings">
-          <li>Profile</li>
-          <li>Settings</li>
-          <li>Help</li>
-          <li>Logout</li>
-        </ul>
-      </nav>
-    </aside>
-
-    <main class="main-content">
-      <header class="topbar">
-        <input type="text" placeholder="Search here ..." class="search-box" />
-        <div class="topbar-icons">
-          <div class="icon">🔔</div>
-          <div class="icon">💬</div>
-          <div class="profile">Mrie Kritani</div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Financial Dashboard</title>
+    <link rel="stylesheet" href="./styles/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="logo-container">
+          <div class="logo">
+            <i class="fas fa-image"></i>
+          </div>
         </div>
-      </header>
 
-      <section class="overview">
-        <div class="card balance">
-          <h4>Your Balance</h4>
-          <p class="amount">$28,891.138</p>
+        <nav class="navigation">
+          <ul class="nav-main">
+            <li class="nav-item active">
+              <a href="#"
+                ><i class="fas fa-th-large"></i><span>Dashboard</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="#"
+                ><i class="far fa-calendar"></i><span>Schedule</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="#"><i class="far fa-comment"></i><span>Message</span></a>
+            </li>
+            <li class="nav-item">
+              <a href="#"
+                ><i class="fas fa-chart-line"></i><span>Analytics</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="#"><i class="fas fa-users"></i><span>Team</span></a>
+            </li>
+          </ul>
+
+          <ul class="nav-secondary">
+            <li class="nav-item">
+              <a href="#"
+                ><i class="far fa-user-circle"></i><span>Profile</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="#"><i class="fas fa-cog"></i><span>Settings</span></a>
+            </li>
+            <li class="nav-item">
+              <a href="#"
+                ><i class="far fa-question-circle"></i><span>Help</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="#"
+                ><i class="fas fa-sign-out-alt"></i><span>Logout</span></a
+              >
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="main-content">
+        <!-- Header -->
+        <header class="header">
+          <div class="search-container">
+            <i class="fas fa-search"></i>
+            <input type="text" placeholder="Search here ..." />
+          </div>
+          <div class="header-actions">
+            <button class="icon-button notification">
+              <i class="far fa-bell"></i>
+            </button>
+            <button class="icon-button messages">
+              <i class="far fa-comment-alt"></i>
+            </button>
+            <div class="user-profile">
+              <img
+                src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg"
+                alt="User Profile"
+              />
+              <span>Mirie Kiritani</span>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+          </div>
+        </header>
+
+        <!-- Dashboard Content -->
+        <div class="dashboard">
+          <!-- Overview Section -->
+          <section class="overview-section">
+            <div class="section-header">
+              <h2>Overview</h2>
+            </div>
+            <div class="cards-container">
+              <!-- Balance Card -->
+              <div class="card balance-card">
+                <div class="card-header">
+                  <div class="card-icon blue">
+                    <i class="fas fa-wallet"></i>
+                  </div>
+                  <div class="card-title">Your Balance</div>
+                  <div class="card-status positive">
+                    <i class="fas fa-arrow-up"></i> 15% compared with last month
+                  </div>
+                </div>
+                <div class="card-content">
+                  <div class="card-value">$28,891.138</div>
+                  <div class="card-action">
+                    <i class="fas fa-arrow-right"></i>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Saving Card -->
+              <div class="card saving-card">
+                <div class="card-header">
+                  <div class="card-icon green">
+                    <i class="fas fa-piggy-bank"></i>
+                  </div>
+                  <div class="card-title">Saving</div>
+                  <div class="card-status negative">
+                    <i class="fas fa-arrow-down"></i> 10% compared with last
+                    month
+                  </div>
+                </div>
+                <div class="card-content">
+                  <div class="card-value">$1,050.44</div>
+                  <div class="card-action">
+                    <i class="fas fa-arrow-right"></i>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Expenses Card -->
+              <div class="card expenses-card">
+                <div class="card-header">
+                  <div class="card-icon yellow">
+                    <i class="fas fa-money-bill-wave"></i>
+                  </div>
+                  <div class="card-title">Expenses</div>
+                  <div class="card-status positive">
+                    <i class="fas fa-arrow-up"></i> 2% compared with last month
+                  </div>
+                </div>
+                <div class="card-content">
+                  <div class="card-value">$200.31</div>
+                  <div class="card-action">
+                    <i class="fas fa-arrow-right"></i>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Incomes Card -->
+              <div class="card incomes-card">
+                <div class="card-header">
+                  <div class="card-icon blue-light">
+                    <i class="fas fa-chart-line"></i>
+                  </div>
+                  <div class="card-title">Incomes</div>
+                  <div class="card-status positive">
+                    <i class="fas fa-arrow-up"></i> 8% compared with last month
+                  </div>
+                </div>
+                <div class="card-content">
+                  <div class="card-value">$21,121.0</div>
+                  <div class="card-action">
+                    <i class="fas fa-arrow-right"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Analytics Section -->
+          <section class="analytics-section">
+            <div class="section-header with-controls">
+              <h2>Analytics</h2>
+              <div class="controls">
+                <div class="legend">
+                  <span class="legend-item">
+                    <span class="legend-color purple"></span>
+                    <span>Label 1</span>
+                  </span>
+                  <span class="legend-item">
+                    <span class="legend-color orange"></span>
+                    <span>Label 1</span>
+                  </span>
+                </div>
+                <div class="dropdown">
+                  <button class="dropdown-toggle">
+                    Weekly <i class="fas fa-chevron-down"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="chart-container">
+              <canvas id="analyticsChart"></canvas>
+            </div>
+          </section>
         </div>
-        <div class="card saving">
-          <h4>Saving</h4>
-          <p class="amount">$1,050.44</p>
-        </div>
-        <div class="card expenses">
-          <h4>Expenses</h4>
-          <p class="amount">$200.31</p>
-        </div>
-        <div class="card incomes">
-          <h4>Incomes</h4>
-          <p class="amount">$21,121.0</p>
-        </div>
-      </section>
 
-      <section class="analytics">
-        <h3>Analytics</h3>
-        <canvas id="analyticsChart"></canvas>
-      </section>
-    </main>
+        <!-- Side Panel -->
+        <aside class="side-panel">
+          <!-- Saving Plan Section -->
+          <section class="saving-plan-section">
+            <div class="section-header with-controls">
+              <h2>Saving Plan</h2>
+              <a href="#" class="see-all">See All</a>
+            </div>
+            <div class="saving-items">
+              <!-- Bali Vacation -->
+              <div class="saving-item">
+                <div class="saving-details">
+                  <h3>Bali Vacation</h3>
+                  <div class="saving-target">Target: August 25, 2022</div>
+                  <div class="saving-amount">
+                    <span class="current-amount">$1,950.21</span>
+                    <span class="target-amount">/$4,000</span>
+                  </div>
+                  <div class="progress-container">
+                    <div class="progress-bar" style="width: 48%"></div>
+                  </div>
+                  <div class="saving-percentage">48%</div>
+                </div>
+              </div>
 
-    <aside class="rightbar">
-      <section class="saving-plan">
-        <h4>Saving Plan <a href="#">See All</a></h4>
-        <ul>
-          <li>
-            <p>Bali Vacation <span>$1950.21</span></p>
-            <div class="progress yellow" style="width: 48%"></div>
-          </li>
-          <li>
-            <p>New Gadget <span>$790.21</span></p>
-            <div class="progress orange" style="width: 79%"></div>
-          </li>
-          <li>
-            <p>Charity <span>$32.11</span></p>
-            <div class="progress green" style="width: 32%"></div>
-          </li>
-        </ul>
-      </section>
+              <!-- New Gadget -->
+              <div class="saving-item">
+                <div class="saving-details">
+                  <h3>New Gadget</h3>
+                  <div class="saving-target">Target: August 25, 2022</div>
+                  <div class="saving-amount">
+                    <span class="current-amount">$790.21</span>
+                    <span class="target-amount">/$1,000</span>
+                  </div>
+                  <div class="progress-container">
+                    <div class="progress-bar" style="width: 79%"></div>
+                  </div>
+                  <div class="saving-percentage">79%</div>
+                </div>
+              </div>
 
-      <section class="transactions">
-        <h4>Recent Transactions <a href="#">See All</a></h4>
-        <ul>
-          <li><span>Figma</span><span>$100</span><span class="completed">Completed</span></li>
-          <li><span>Youtube</span><span>$120</span><span class="completed">Completed</span></li>
-          <li><span>Spotify</span><span>$15</span><span class="completed">Completed</span></li>
-          <li><span>Freepik</span><span>$3000</span><span class="completed">Completed</span></li>
-        </ul>
-      </section>
-    </aside>
-  </div>
+              <!-- Charity -->
+              <div class="saving-item">
+                <div class="saving-details">
+                  <h3>Charity</h3>
+                  <div class="saving-target">Target: August 25, 2022</div>
+                  <div class="saving-amount">
+                    <span class="current-amount">$32.11</span>
+                    <span class="target-amount">/$100</span>
+                  </div>
+                  <div class="progress-container">
+                    <div class="progress-bar" style="width: 32%"></div>
+                  </div>
+                  <div class="saving-percentage">32%</div>
+                </div>
+              </div>
+            </div>
+          </section>
 
+          <!-- Recent Transactions Section -->
+          <section class="transactions-section">
+            <div class="section-header with-controls">
+              <h2>Recent Transaction</h2>
+              <a href="#" class="see-all">See All</a>
+            </div>
+            <div class="transaction-items">
+              <!-- Figma Transaction -->
+              <div class="transaction-item">
+                <div class="transaction-icon">
+                  <i class="fab fa-figma"></i>
+                </div>
+                <div class="transaction-details">
+                  <h3>Figma</h3>
+                  <div class="transaction-date">August 20, 2022</div>
+                </div>
+                <div class="transaction-amount completed">
+                  <span class="amount">$100</span>
+                  <div class="status">Completed</div>
+                </div>
+              </div>
 
-  <script src="scripts/main.js"></script>
-</body>
+              <!-- Youtube Transaction -->
+              <div class="transaction-item">
+                <div class="transaction-icon">
+                  <i class="fab fa-youtube"></i>
+                </div>
+                <div class="transaction-details">
+                  <h3>Youtube</h3>
+                  <div class="transaction-date">August 20, 2022</div>
+                </div>
+                <div class="transaction-amount completed">
+                  <span class="amount">$120</span>
+                  <div class="status">Completed</div>
+                </div>
+              </div>
 
+              <!-- Spotify Transaction -->
+              <div class="transaction-item">
+                <div class="transaction-icon">
+                  <i class="fab fa-spotify"></i>
+                </div>
+                <div class="transaction-details">
+                  <h3>Spotify</h3>
+                  <div class="transaction-date">August 20, 2022</div>
+                </div>
+                <div class="transaction-amount completed">
+                  <span class="amount">$15</span>
+                  <div class="status">Completed</div>
+                </div>
+              </div>
+
+              <!-- Freepik Transaction -->
+              <div class="transaction-item">
+                <div class="transaction-icon">
+                  <i class="fas fa-images"></i>
+                </div>
+                <div class="transaction-details">
+                  <h3>Freepik</h3>
+                  <div class="transaction-date">August 20, 2022</div>
+                </div>
+                <div class="transaction-amount completed">
+                  <span class="amount">$300</span>
+                  <div class="status">Completed</div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </aside>
+      </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./scripts/main.js"></script>
+  </body>
 </html>
-
